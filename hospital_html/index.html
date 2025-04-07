@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Hospital - Gestão</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <div class="container">
+    <h2>Cadastro de Médico</h2>
+    <input type="text" id="medicoNome" placeholder="Nome do médico" />
+    <input type="text" id="medicoEspecialidade" placeholder="Especialidade" />
+    <button onclick="cadastrarMedico()">Cadastrar Médico</button>
+  </div>
+
+  <div class="container">
+    <h2>Cadastro de Paciente</h2>
+    <input type="text" id="pacienteNome" placeholder="Nome do paciente" />
+    <input type="text" id="pacienteCpf" placeholder="CPF" />
+    <button onclick="cadastrarPaciente()">Cadastrar Paciente</button>
+  </div>
+
+  <div class="container">
+    <h2>Agendamento de Consulta</h2>
+    <input type="number" id="consultaMedicoId" placeholder="ID do Médico" />
+    <input type="number" id="consultaPacienteId" placeholder="ID do Paciente" />
+    <input type="datetime-local" id="consultaDataHora" />
+    <input type="number" step="0.01" id="consultaValor" placeholder="Valor da consulta" />
+    <button onclick="cadastrarConsulta()">Agendar Consulta</button>
+  </div>
+
+  <!-- Ver Médico por ID -->
+<section>
+    <h2>Ver Médico por ID</h2>
+    <input type="number" id="medico-id" placeholder="ID do médico">
+    <button onclick="verMedico()">Ver Médico</button>
+    <div id="medico-resultado"></div>
+  </section>
+  
+  <!-- Ver Paciente por ID -->
+  <section>
+    <h2>Ver Paciente por ID</h2>
+    <input type="number" id="paciente-id" placeholder="ID do paciente">
+    <button onclick="verPaciente()">Ver Paciente</button>
+    <div id="paciente-resultado"></div>
+  </section>
+  
+
+  <script src="script.js"></script>
 </body>
 </html>
